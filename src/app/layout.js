@@ -1,6 +1,7 @@
 import { Geist } from "next/font/google";
 import "@/app/globals.css";
-import Link from "next/link";
+import MenuLink from "@/components/MenuLink";
+
 
 
 const geistSans = Geist({ subsets: ["latin"] });
@@ -20,11 +21,11 @@ export default function RootLayout({ children }) {
         className={geistSans.className + ' antialiased min-h-screen'}
       >
         <nav className="text-xl bg-blue-300 p-4 flex justify-between miclase">
-          <Link href="/">INICIO</Link>
-          <Link href="/tienda">TIENDA</Link>
-          <Link href="/blog">BLOG</Link>
-          <Link href="/acerca">ACERCA DE</Link>
-          <Link href="/registro">REGISTRO</Link>
+          <MenuLink href="/">INICIO</MenuLink>
+          <MenuLink href="/tienda">TIENDA</MenuLink>
+          <MenuLink href="/blog">BLOG</MenuLink>
+          <MenuLink href="/acerca">ACERCA DE</MenuLink>
+          <MenuLink href="/registro">REGISTRO</MenuLink>
         </nav>
         <div className="p-4">
           {children}
